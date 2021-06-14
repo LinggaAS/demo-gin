@@ -32,6 +32,8 @@ blocks:
           - sem-version go 1.16
           - checkout
           - cache restore
+          - go mod vendor
+          - cache store
       jobs:
         - name: Test
           commands:
@@ -48,6 +50,8 @@ blocks:
           - sem-version go 1.16
           - checkout
           - cache restore
+          - go mod vendor
+          - cache store
       jobs:
         - name: Build
           commands:
